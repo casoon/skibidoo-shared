@@ -1,5 +1,5 @@
 {
-  "name": "@skibidoo/shared",
+  "name": "@casoon/skibidoo-shared",
   "version": "0.1.0",
   "description": "Shared types, schemas and utilities for Skibidoo e-commerce system",
   "type": "module",
