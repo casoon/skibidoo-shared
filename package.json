@@ -1,7 +1,7 @@
 {
   "name": "@casoon/skibidoo-shared",
-  "version": "0.1.0",
-  "description": "Shared types, schemas and utilities for Skibidoo e-commerce system",
+  "version": "0.2.0",
+  "description": "Shared types, schemas, utilities and configs for Skibidoo e-commerce system",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -22,6 +22,18 @@
     "./utils": {
       "types": "./dist/utils/index.d.ts",
       "import": "./dist/utils/index.js"
+    },
+    "./config": {
+      "types": "./dist/config/index.d.ts",
+      "import": "./dist/config/index.js"
+    },
+    "./eslint": {
+      "types": "./dist/config/eslint.d.ts",
+      "import": "./dist/config/eslint.js"
+    },
+    "./prettier": {
+      "types": "./dist/config/prettier.d.ts",
+      "import": "./dist/config/prettier.js"
     }
   },
   "files": ["dist"],
@@ -34,7 +46,7 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm build"
   },
-  "keywords": ["skibidoo", "ecommerce", "types", "schemas", "zod"],
+  "keywords": ["skibidoo", "ecommerce", "types", "schemas", "zod", "eslint", "prettier"],
   "author": "casoon",
   "license": "LGPL-3.0",
   "repository": {
@@ -51,6 +63,14 @@
   },
   "dependencies": {
     "zod": "^3.24.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": { "optional": true },
+    "prettier": { "optional": true }
   },
   "volta": { "node": "24.11.1" }
 }
