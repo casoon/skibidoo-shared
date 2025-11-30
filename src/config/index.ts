@@ -9,3 +9,5 @@ export {
 } from "./eslint.js";
 
 export { prettierConfig, prettierConfigObject } from "./prettier.js";
+
+export { biomeConfig, generateBiomeJson } from "./biome.js";
