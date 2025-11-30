@@ -1,6 +1,6 @@
 {
   "name": "@casoon/skibidoo-shared",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shared types, schemas, utilities and configs for Skibidoo e-commerce system",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,14 +27,6 @@
       "types": "./dist/config/index.d.ts",
       "import": "./dist/config/index.js"
     },
-    "./eslint": {
-      "types": "./dist/config/eslint.d.ts",
-      "import": "./dist/config/eslint.js"
-    },
-    "./prettier": {
-      "types": "./dist/config/prettier.d.ts",
-      "import": "./dist/config/prettier.js"
-    },
     "./biome": {
       "types": "./dist/config/biome.d.ts",
       "import": "./dist/config/biome.js"
@@ -46,11 +38,12 @@
     "dev": "tsup --watch",
     "test": "vitest",
     "test:run": "vitest run",
-    "lint": "eslint src/",
+    "lint": "biome check src/",
+    "format": "biome format --write src/",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm build"
   },
-  "keywords": ["skibidoo", "ecommerce", "types", "schemas", "zod", "eslint", "prettier", "biome"],
+  "keywords": ["skibidoo", "ecommerce", "types", "schemas", "zod", "biome"],
   "author": "casoon",
   "license": "LGPL-3.0",
   "repository": {
@@ -59,8 +52,8 @@
   },
   "engines": { "node": ">=24" },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
     "@types/node": "^22.0.0",
-    "eslint": "^9.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.6.0",
     "vitest": "^2.0.0"
@@ -69,14 +62,10 @@
     "zod": "^3.24.0"
   },
   "peerDependencies": {
-    "@biomejs/biome": "^1.9.0",
-    "eslint": "^9.0.0",
-    "prettier": "^3.0.0"
+    "@biomejs/biome": "^1.9.0"
   },
   "peerDependenciesMeta": {
-    "@biomejs/biome": { "optional": true },
-    "eslint": { "optional": true },
-    "prettier": { "optional": true }
+    "@biomejs/biome": { "optional": true }
   },
   "volta": { "node": "24.11.1" }
 }

@@ -7,8 +7,6 @@ export default defineConfig({
     "src/schemas/index.ts",
     "src/utils/index.ts",
     "src/config/index.ts",
-    "src/config/eslint.ts",
-    "src/config/prettier.ts",
     "src/config/biome.ts"
   ],
   format: ["esm"],
